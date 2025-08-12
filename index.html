@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday 🎉</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <img src="assets/hero.jpg" alt="Birthday Hero" class="hero-image" />
-    <h1 id="heroText"></h1>
-  </header>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>🎂 Surprise! Happy Birthday!</h1>
+            <p>Wishing you a day filled with love, laughter, and happiness 💖</p>
+            <div class="countdown" id="countdown"></div>
+        </div>
+    </header>
 
-  <!-- Carousel -->
-  <section class="carousel">
-    <div class="slides" id="slides">
-      <div class="slide"><img src="assets/sample1.jpg" alt="Memory 1"></div>
-      <div class="slide"><img src="assets/sample2.jpg" alt="Memory 2"></div>
-      <div class="slide"><img src="assets/sample3.jpg" alt="Memory 3"></div>
-    </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </section>
+    <!-- Carousel -->
+    <section class="carousel-container">
+        <div class="carousel" id="carousel">
+            <div class="slide"><img src="assets/img1.jpg" alt="Memory 1"></div>
+            <div class="slide"><img src="assets/img2.jpg" alt="Memory 2"></div>
+            <div class="slide"><img src="assets/img3.jpg" alt="Memory 3"></div>
+        </div>
+        <button class="carousel-btn prev" id="prev">&#10094;</button>
+        <button class="carousel-btn next" id="next">&#10095;</button>
+    </section>
 
-  <!-- Optional Grid -->
-  <section class="grid" id="optionalGrid">
-    <div><img src="assets/grid1.jpg" alt="Grid 1"></div>
-    <div><img src="assets/grid2.jpg" alt="Grid 2"></div>
-    <div><img src="assets/grid3.jpg" alt="Grid 3"></div>
-  </section>
+    <!-- Audio Player -->
+    <section class="audio-section">
+        <audio id="birthdaySong" controls autoplay loop>
+            <source src="assets/birthday.mp3" type="audio/mpeg">
+        </audio>
+    </section>
 
-  <script src="config.js"></script>
-  <script src="script.js"></script>
+    <!-- Optional Grid (Gallery) -->
+    <section class="gallery">
+        <div class="grid-item"><img src="assets/gallery1.jpg" alt="Gallery 1"></div>
+        <div class="grid-item"><img src="assets/gallery2.jpg" alt="Gallery 2"></div>
+        <div class="grid-item"><img src="assets/gallery3.jpg" alt="Gallery 3"></div>
+    </section>
+
+    <!-- Animations -->
+    <canvas id="confetti"></canvas>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="confetti.js"></script>
 </body>
 </html>

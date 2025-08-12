@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday 🎉</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday 🎉</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>🎂 Surprise! Happy Birthday!</h1>
-            <p>Wishing you a day filled with love, laughter, and happiness 💖</p>
-            <div class="countdown" id="countdown"></div>
-        </div>
-    </header>
 
-    <!-- Carousel -->
-    <section class="carousel-container">
-        <div class="carousel" id="carousel">
-            <div class="slide"><img src="assets/img1.jpg" alt="Memory 1"></div>
-            <div class="slide"><img src="assets/img2.jpg" alt="Memory 2"></div>
-            <div class="slide"><img src="assets/img3.jpg" alt="Memory 3"></div>
-        </div>
-        <button class="carousel-btn prev" id="prev">&#10094;</button>
-        <button class="carousel-btn next" id="next">&#10095;</button>
-    </section>
+  <!-- HERO (full-width image + overlay text) -->
+  <header class="hero" role="banner">
+    <img src="image/hero.jpg" alt="Happy Birthday" class="hero-image" id="heroImage" />
+    <div class="hero-overlay">
+      <h1 id="heroTitle">Happy Birthday!</h1>
+      <p id="heroSubtitle">Wishing you an amazing day 💖</p>
+      <div class="hero-actions">
+        <button id="special-btn" class="special-btn">Surprise!</button>
+      </div>
+      <div id="countdown" class="countdown" aria-live="polite"></div>
+    </div>
+  </header>
 
-    <!-- Audio Player -->
-    <section class="audio-section">
-        <audio id="birthdaySong" controls autoplay loop>
-            <source src="assets/birthday.mp3" type="audio/mpeg">
-        </audio>
-    </section>
+  <!-- MUSIC PICKER + AUDIO PLAYER -->
+  <section class="music-section" aria-label="Music controls">
+    <label for="music-picker">Choose music: </label>
+    <select id="music-picker" aria-label="Music picker">
+      <option value="assets/sample1.mp3">Sample Song 1</option>
+      <option value="assets/sample2.mp3">Sample Song 2</option>
+      <option value="custom">Upload your own...</option>
+    </select>
+    <audio id="bg-music" controls preload="none"></audio>
+  </section>
 
-    <!-- Optional Grid (Gallery) -->
-    <section class="gallery">
-        <div class="grid-item"><img src="assets/gallery1.jpg" alt="Gallery 1"></div>
-        <div class="grid-item"><img src="assets/gallery2.jpg" alt="Gallery 2"></div>
-        <div class="grid-item"><img src="assets/gallery3.jpg" alt="Gallery 3"></div>
-    </section>
+  <!-- CAROUSEL / SLIDESHOW -->
+  <section class="carousel-wrap" aria-label="Photo carousel">
+    <div class="carousel" id="carousel">
+      <!-- slides are filled in HTML for sample; you can add more -->
+      <div class="slide"><img src="image/photo1.png" alt="Photo 1"></div>
+      <div class="slide"><img src="image/1 Interrupted Action 8_2_2025 5_59_38 AM.png" alt="Photo 2"></div>
+      <!-- Additional slides can be inserted here -->
+    </div>
+    <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous slide">&#10094;</button>
+    <button class="carousel-btn next" id="carouselNext" aria-label="Next slide">&#10095;</button>
+    <div class="carousel-dots" id="carouselDots" aria-hidden="false"></div>
+  </section>
 
-    <!-- Animations -->
-    <canvas id="confetti"></canvas>
+  <!-- OPTIONAL GRID GALLERY -->
+  <section class="grid-gallery" id="gridGallery" aria-label="Gallery">
+    <div class="grid-item"><img src="image/photo1.png" alt="Gallery 1"></div>
+    <div class="grid-item"><img src="image/photo1.png" alt="Gallery 2"></div>
+    <div class="grid-item"><img src="image/photo1.png" alt="Gallery 3"></div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="confetti.js"></script>
+  <!-- Extra pages existing in your repo (kept as files) -->
+  <!-- keep special.html, funny.html, sorry.html in root if present -->
+
+  <!-- CONFETTI CANVAS -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- Config + Scripts -->
+  <script src="config.js"></script>
+  <script src="confetti.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

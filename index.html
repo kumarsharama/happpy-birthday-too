@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Special Slideshow</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="assets/hero.jpg" alt="Birthday Hero" class="hero-image" />
+    <h1 id="heroText"></h1>
+  </header>
 
-<!-- Floating Hearts Background -->
-<div class="hearts-bg"></div>
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="assets/sample1.jpg" alt="Memory 1"></div>
+      <div class="slide"><img src="assets/sample2.jpg" alt="Memory 2"></div>
+      <div class="slide"><img src="assets/sample3.jpg" alt="Memory 3"></div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </section>
 
-<div class="slideshow-container">
-    <img id="slideshow" src="images/1000054083.jpg" alt="Slideshow Image">
+  <!-- Optional Grid -->
+  <section class="grid" id="optionalGrid">
+    <div><img src="assets/grid1.jpg" alt="Grid 1"></div>
+    <div><img src="assets/grid2.jpg" alt="Grid 2"></div>
+    <div><img src="assets/grid3.jpg" alt="Grid 3"></div>
+  </section>
 
-    <!-- Pink Love Button -->
-    <button class="love-btn" onclick="location.href='special.html'">💖 Our Special Moment</button>
-</div>
-
-<script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
